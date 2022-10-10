@@ -1,5 +1,4 @@
 from django.urls import path, re_path, include
-from macpath import basename
 from rest_framework.routers import DefaultRouter
 
 from .viewsets import PostViewset, InfluencerViewset, CompanyViewset
