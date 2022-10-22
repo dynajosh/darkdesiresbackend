@@ -1,0 +1,8 @@
+version: '3.7'
+
+services: #These are the images that will be running as containers
+  nginx: #Name of service
+
+  #location of the dockerfile that defines the nginx image
+  # This will be used to spin up an image during the build stage
+  build: ./nginx
