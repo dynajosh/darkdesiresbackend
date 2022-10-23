@@ -42,9 +42,6 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework',
     'rest_framework_swagger',
-    'tweepy',
-    'instaloader',
-    'selenium',
 
 ]
 
