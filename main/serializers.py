@@ -41,7 +41,7 @@ class PostSerializer(serializers.ModelSerializer):
         
         new_post = Post()
         new_post.body = validated_data["body"]
-        gradient_item = random.randint(0, int(len(gradient_list)-1))
+        gradient_item = random.randint(0, int(len(gradient_list))-1)
         print(gradient_item)
         new_post.primaryColor = gradient_list[gradient_item].get("primary")
         new_post.secondaryColor = gradient_list[gradient_item].get("secondary")
