@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 env = environ.Env()
 # reading .env file
@@ -96,10 +97,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DATABASE_NAME"),
-        'USER': env("DATABASE_USER"),
-        'PASSWORD': env("DATABASE_PASSWORD"),
-        'HOST': env("DATABSE_HOST"),
+        'NAME': (os.environ.get("DATABASE_NAME")),
+        'USER': (os.environ.get("DATABASE_USER")),
+        'PASSWORD': (os.environ.get("DATABASE_PASSWORD")),
+        'HOST': (os.environ.get("DATABSE_HOST")),
         'PORT':  5432
     }
 }
